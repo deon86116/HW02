@@ -34,6 +34,7 @@ int main(){
     freq = round(freqcnt);
     int digit = (int) freq;
     float k;
+    float waittime = (freq*40);
     int x = 0;
     if((int)freq >= 100) x = 100;
     else x = 10;
@@ -63,7 +64,7 @@ int main(){
 
         Aout = 0.5 + 0.5*sin(k*3.14159);
 
-        wait(0.001);
+        wait(1./waittime);
         }
     }
 }
