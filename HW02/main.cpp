@@ -33,7 +33,7 @@ int main(){
     }
     freq = round(count_);
     int tmp = (int) freq;
-   
+    float k;
     int x = 0;
     if((int)freq >= 100) x = 100;
     else x = 10;
@@ -58,6 +58,12 @@ int main(){
             display = 0x00;
             redLED = 0;
             greenLED = 1;
+        }
+        for( k=0; k<2; k+=0.05 ){
+
+        Aout = 0.5 + 0.5*sin(k*3.14159);
+
+        wait(0.001);
         }
     }
 }
